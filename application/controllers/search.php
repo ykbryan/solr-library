@@ -11,7 +11,7 @@ class Search extends CI_Controller {
 	function index(){
 		if($this->input->post()){
 			$this->load->library('search_library');
-			$result = $this->search_library->getAnyByStoreSearch($this->input->post('keyword'));
+			$result = $this->search_library->search($this->input->post('keyword'));
 		}
 
 	}
